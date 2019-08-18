@@ -2,8 +2,12 @@ module Bot::DiscordCommands
   module Musicwords
     extend Discordrb::Commands::CommandContainer
 
-    command (:mword, description: "音楽語録がわかりますよ、詳細は実行してみればわかる") do |event, letter|
-      event.respond(musicwords_message(letter: letter)
+    command(
+      :mword,
+      description: "音楽語録がわかりますよ、詳細は実行してみればわかる"
+      usage: "mword [平仮名1文字]"
+    ) do |event, letter|
+      event.respond(musicwords_message(letter: letter))
     end
 
     def musicwords_message(letter: nil)
