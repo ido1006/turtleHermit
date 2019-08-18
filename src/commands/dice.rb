@@ -2,7 +2,11 @@ module Bot::DiscordCommands
   module Dice
     extend Discordrb::Commands::CommandContainer
 
-    command (:dice, description: "サイコロ振りますよ、引数を最大値として振ります(無ければ6)") do |event, max|
+    command(
+      :dice,
+      description: "サイコロ振りますよ",
+      usage: "dice [max]"
+    ) do |event, max|
       event.respond(dice_message(max: max))
     end
 
