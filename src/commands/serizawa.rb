@@ -2,15 +2,16 @@ module Bot::DiscordCommands
   module Serizawa
     extend Discordrb::Commands::CommandContainer
 
-    command(
-      :seri,
-      description: "S先生っぽいこと言いますよ",
-      usage: "seri [first] [second]"
-    ) do |event, first, second|
+    attrs = {
+      description: '芹沢構文を返しますよ',
+      usage: 'seri <first> <second>'
+    }
+
+    command :seri, attrs do |event, first, second|
       event.respond(serizawa_message(first: first, second: second))
     end
 
-    def serizawa_message(first: nil, second: nil)
+    def self.serizawa_message(first: nil, second: nil)
       first ||= "勉強"
       second ||= "ゲーム"
       message  = "みんな大丈夫かなぁ〜？\n"
