@@ -4,7 +4,7 @@ module Bot::DiscordCommands
     # おまじないです module名はこのソースのコマンド名でおkだと思います
 
     attrs = {
-      description: 'module追加用のサンプルです。' # プログラムの説明を書きます
+      description: 'module追加用のサンプルです。', # プログラムの説明を書きます ,を忘れないで(2敗)
       usage: 'url: https://github.com/ido1006/turtleHermit' # コードの使い方を書きます
     }
 
