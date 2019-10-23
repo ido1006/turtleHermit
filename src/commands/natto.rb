@@ -13,14 +13,9 @@ module Bot::DiscordCommands
     end
 
     def self.natto_message(words: nil)
-      message = ""
-      if words == " " then
-        message = "解析したい文字列を入力してくだしあ\n"
-      else
-        nm = Natto::MeCab.new
-        nm.parse(words) do |n|
-          message += "#{n.surface}\t#{n.feature}\n"
-        end
+      nm = Natto::MeCab.new
+      nm.parse(words) do |n|
+        message += "#{n.surface}\t#{n.feature}\n"
       end
       message
     end
