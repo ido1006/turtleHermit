@@ -11,6 +11,7 @@
 #####
 
 require 'discordrb'
+require 'natto'
 require 'net/http'
 require 'uri'
 require 'json'
