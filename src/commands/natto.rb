@@ -13,6 +13,7 @@ module Bot::DiscordCommands
     end
 
     def self.natto_message(words: nil)
+      message = ""
       nm = Natto::MeCab.new
       nm.parse(words) do |n|
         message += "#{n.surface}\t#{n.feature}\n"
