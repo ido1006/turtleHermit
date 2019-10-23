@@ -20,6 +20,8 @@ GEM
     mime-types (3.2.2)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2019.0331)
+    natto (1.1.2)
+      ffi (>= 1.9.0)
     netrc (0.11.0)
     opus-ruby (1.0.1)
       ffi
@@ -43,6 +45,7 @@ PLATFORMS
 
 DEPENDENCIES
   discordrb
+  natto
 
 BUNDLED WITH
    1.17.3
