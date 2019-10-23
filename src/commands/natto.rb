@@ -22,6 +22,7 @@ module Bot::DiscordCommands
           message += "#{n.surface}\t#{n.feature}\n"
         end
       end
+      message
     end
   end
 end
