@@ -13,8 +13,8 @@ module Bot::DiscordCommands
     end
 
     def self.natto_message(words: nil)
-      message = " "
-      if words == nil then
+      message = ""
+      if words == " " then
         message = "解析したい文字列を入力してくだしあ\n"
       else
         nm = Natto::MeCab.new
