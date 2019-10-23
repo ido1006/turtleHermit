@@ -13,7 +13,7 @@ module Bot::DiscordCommands
     end
 
     def self.natto_message(words: nil)
-      message = ""
+      message = " "
       if words == nil then
         message = "解析したい文字列を入力してくだしあ\n"
       else
