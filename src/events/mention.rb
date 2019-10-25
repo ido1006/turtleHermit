@@ -3,7 +3,7 @@ module Bot::DiscordEvents
     extend Discordrb::EventContainer
 
     mention do |event|
-      event.respond("!helpで使い方が見れるよ")
+      event.respond(DiscordCommands::Dice.dice_message(6))
     end
   end
 end
