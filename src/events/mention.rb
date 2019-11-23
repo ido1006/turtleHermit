@@ -3,7 +3,7 @@ module Bot::DiscordEvents
     extend Discordrb::EventContainer
 
     mention do |event|
-      event.respond("==mention機能工事中==")
+      event.respond("#{event.user.name}、何の用だ？")
     end
   end
 end
