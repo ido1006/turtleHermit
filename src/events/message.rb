@@ -3,7 +3,7 @@ module Bot::DiscordEvents
     extend Discordrb::EventContainer
 
     message(contains: /^(いまなんじ)/) do |event|
-      event.respond("#{event.timestamp}")
+      event.respond("hjsdkfhsadklsafd")
     end
   end
 end
