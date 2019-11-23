@@ -9,7 +9,7 @@ module Bot::DiscordCommands
 
     command :echo, attrs do |event, *args|
       args = args.join(' ').to_s
-      event.respond(args)
+      event.send_message(args)
     end
   end
 end
