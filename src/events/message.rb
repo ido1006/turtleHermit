@@ -2,7 +2,11 @@ module Bot::DiscordEvents
   module Messages
     extend Discord::EventContainer
 
-    message(:contains "bomb") do |event|
+    bomb_attrs = {
+      contains: 'bomb'
+    }
+
+    message, bomb_attrs do |event|
       event.respond("今誰か爆弾って言った！？")
     end
   end
