@@ -1,7 +1,8 @@
 module Bot::DiscordCommands
   module Sample
     extend Discordrb::Commands::CommandContainer
-    # おまじないです module名はこのソースのコマンド名でおkだと思います
+    # おまじないです module名はこのソースのコマンド名でおkだと思います。
+    # module名の1文字目は大文字にしてください。エラー吐いた！(2020/4/7追記)
 
     attrs = {
       description: 'module追加用のサンプルです。', # プログラムの説明を書きます ,を忘れないで(2敗)

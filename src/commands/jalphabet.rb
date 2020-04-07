@@ -1,5 +1,5 @@
 module Bot::DiscordCommands
-  module jalphabet
+  module Jalphabet
     extend Discordrb::Commands::CommandContainer
     # おまじないです module名はこのソースのコマンド名でおkだと思います
 
