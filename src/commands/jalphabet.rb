@@ -17,7 +17,7 @@ module Bot::DiscordCommands
 
     def self.jalphabet_message(args: nil) # self. を忘れずに！
       args ||= "引数が空っぽやで。" # 引数が空っぽの時の処理
-      args = args.gsub('a','太')
+      args = args.gsub('a','ム')
       args = args.gsub('b','阝')
       args = args.gsub('c','て')
       args = args.gsub('d','ワ')
@@ -43,7 +43,7 @@ module Bot::DiscordCommands
       args = args.gsub('x','メ')
       args = args.gsub('y','ソ')
       args = args.gsub('z','之')
-      args = args.gsub('A','太')
+      args = args.gsub('A','ム')
       args = args.gsub('B','阝')
       args = args.gsub('C','て')
       args = args.gsub('D','ワ')
