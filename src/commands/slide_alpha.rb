@@ -12,7 +12,8 @@ module Bot::DiscordCommands
       end
   
       def self.slide_message(args: nil, num: nil) # self. を忘れずに！
-        num ||= 0
+        num ||= "0"
+        num = num.to_i
         args ||= "abc" # 引数が空っぽの時の処理
         alphabet_small = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
         alphabet_big = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
