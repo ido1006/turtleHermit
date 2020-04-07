@@ -4,14 +4,14 @@ module Bot::DiscordCommands
       
       attrs = {
         description: 'アルファベットを指定した分ずらします', # プログラムの説明を書きます ,を忘れないで(2敗)
-        usage: 'slide <num> <text>' # コードの使い方を書きます
+        usage: 'slide <text> <num>' # コードの使い方を書きます
       }
   
-      command :slide, attrs do |event, num, args| # event はコマンド自身、args は引数
-        event.respond(slide_message(num: num, args: args)) #respondの中身のmessageをsample_message から受け取りますよってこと
+      command :slide, attrs do |event, args, num| # event はコマンド自身、args は引数
+        event.respond(slide_message(args: args, num: num)) #respondの中身のmessageをsample_message から受け取りますよってこと
       end
   
-      def self.slide_message(num: nil, args: nil) # self. を忘れずに！
+      def self.slide_message(args: nil, num: nil) # self. を忘れずに！
         num ||= 0
         args ||= "abc" # 引数が空っぽの時の処理
         alphabet_small = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
