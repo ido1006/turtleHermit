@@ -18,17 +18,34 @@ module Bot::DiscordCommands
         alphabet_small = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
         alphabet_big = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 
-        for i in 0..25 do
-            j = i + num
-            if j < 0 then
-                j += 26 * (-j / 26 + 1)
+        for i in 0..args.size-1 do
+            x = args[i].ord
+            a_s = "a".ord
+            z_s = "z".ord
+            a_l = "A".ord
+            z_l = "Z".ord
+    
+            if a_s <= x && x <= z_s then
+                x += num
+                if x < a_s then
+                    x = a_s + 26 - ((a_s - x) % 26)
+                end
+                if x >= z_s then
+                    x = a_s + ((x - a_s) % 26)
+                end
+                args[i] = x.chr
             end
-            if j >= 26 then
-                j -= 26 * (j / 26)
+    
+            if a_l <= x && x <= z_l then
+                x += num
+                if x < a_l then
+                    x = a_l + 26 - ((a_l - x) % 26)
+                end
+                if x >= z_l then
+                    x = a_l + ((x - a_l) % 26)
+                end
+                args[i] = x.chr
             end
-
-            args = args.gsub(alphabet_small[i], alphabet_small[j])
-            args = args.gsub(alphabet_big[i], alphabet_big[j])
         end
 
         message = "#{args}"
