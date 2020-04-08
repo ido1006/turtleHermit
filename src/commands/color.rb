@@ -58,7 +58,7 @@ module Bot::DiscordCommands
     		rs = "07"
     	elsif r==8
     		rs = "08"
-    	elsif r==9Í
+    	elsif r==9
    		    rs = "09"
         elsif r==10
     	    rs = "0a"
