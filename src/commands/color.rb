@@ -14,7 +14,7 @@ module Bot::DiscordCommands
         # よく ~~_message として
         # 内容を関数に投げます
         event.respond(makecolor(args: args)) #respondの中身のmessageをsample_message から受け取りますよってこと
-        event.send_file(File.open('colorpicture/image.png', 'r'))
+        event.send_file(File.open('src/commands/colorpicture/image.png', 'r'))
       end
   
       def self.makecolor(args: nil) # self. を忘れずに！
@@ -32,13 +32,13 @@ module Bot::DiscordCommands
         end
 
 
-        File.open("colorpicture/ccg.txt","w") do |text|
+        File.open("src/commands/colorpicture/ccg.txt","w") do |text|
         	text.puts(r)
         	text.puts(g)
             text.puts(b)
         end
 
-        Open3.capture3("ruby colorpicture/genim.rb > colorpicture/image.png")
+        Open3.capture3("ruby src/commands/colorpicture/genim.rb > colorpicture/image.png")
 
     	if r==0 then
 	        rs = "00"
