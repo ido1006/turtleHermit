@@ -40,6 +40,7 @@ GEM
     websocket-client-simple (0.3.0)
       event_emitter
       websocket
+    zlib (1.1.0)
 
 PLATFORMS
   ruby
@@ -48,6 +49,7 @@ DEPENDENCIES
   discordrb
   natto
   open3
+  zlib
 
 RUBY VERSION
    ruby 2.6.3p62
