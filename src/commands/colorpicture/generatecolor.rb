@@ -5,11 +5,10 @@ r = 0xff
 g = 0xff
 b = 0xff
 
-File.open("ccg.txt"){|f|
-	r = f.gets.to_i
-	g = f.gets.to_i
-	b = f.gets.to_i
-}
+color = ARGV[0].scan(/.{1,#{2}}/)
+r = color[0].to_i(16)
+g = color[1].to_i(16)
+b = color[2].to_i(16)
 
 width, height = 128, 128
 depth, color_type = 8, 2

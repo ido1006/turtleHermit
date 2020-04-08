@@ -31,15 +31,6 @@ module Bot::DiscordCommands
             b = color[2].to_i(16)
         end
 
-
-        File.open("src/commands/colorpicture/ccg.txt","w") do |text|
-        	text.puts(r)
-        	text.puts(g)
-            text.puts(b)
-        end
-
-        Open3.capture3("ruby src/commands/colorpicture/generatecolor.rb > src/commands/colorpicture/image.png")
-
     	if r==0 then
 	        rs = "00"
         elsif r==1 then
@@ -146,7 +137,11 @@ module Bot::DiscordCommands
 	    	bs = "0f"
         else
 	    	bs = b.to_s(16)
-	    end
+		end
+		
+		command = "ruby src/commands/colorpicture/generatecolor.rb "+rs+gs+bs+" > src/commands/colorpicture/image.png"
+		Open3.capture3(command)
+		
         colorcode="#" + rs + gs + bs
         colorcode
         end
