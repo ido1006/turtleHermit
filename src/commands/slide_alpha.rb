@@ -24,6 +24,8 @@ module Bot::DiscordCommands
                 z_s = "z".ord
                 a_l = "A".ord
                 z_l = "Z".ord
+                n_0 = "0".ord
+                n_9 = "9".ord
     
                 if a_s <= x && x <= z_s then
                     x += num
