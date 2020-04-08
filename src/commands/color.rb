@@ -38,7 +38,7 @@ module Bot::DiscordCommands
             text.puts(b)
         end
 
-        Open3.capture3("ruby src/commands/colorpicture/genim.rb > colorpicture/image.png")
+        Open3.capture3("ruby src/commands/colorpicture/generatecolor.rb > src/commands/colorpicture/image.png")
 
     	if r==0 then
 	        rs = "00"

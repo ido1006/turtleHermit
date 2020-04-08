@@ -23,6 +23,7 @@ GEM
     natto (1.1.2)
       ffi (>= 1.9.0)
     netrc (0.11.0)
+    open3 (0.1.0)
     opus-ruby (1.0.1)
       ffi
     rbnacl (3.4.0)
@@ -46,6 +47,7 @@ PLATFORMS
 DEPENDENCIES
   discordrb
   natto
+  open3
 
 RUBY VERSION
    ruby 2.6.3p62
