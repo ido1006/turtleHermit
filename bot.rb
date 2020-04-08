@@ -15,7 +15,7 @@ require 'natto'
 require 'net/http'
 require 'uri'
 require 'json'
-require 'Open3'
+require 'open3'
 
 module Bot
   BOT_TOKEN = ENV["TOKEN"].freeze
