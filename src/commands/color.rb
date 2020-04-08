@@ -26,9 +26,9 @@ module Bot::DiscordCommands
         else
             args = args.delete("#")
             color = args.scan(/.{1,#{2}}/)
-            r = color[0]
-            g = color[1]
-            b = color[2]
+            r = color[0].to_i(16)
+            g = color[1].to_i(16)
+            b = color[2].to_i(16)
         end
 
 
@@ -52,25 +52,25 @@ module Bot::DiscordCommands
 	        rs = "04"
         elsif r==5 then
         	rs = "05"
-        elsif r==6
+        elsif r==6 then
 	    	rs = "06"
-      	elsif r==7
+      	elsif r==7 then
     		rs = "07"
-    	elsif r==8
+    	elsif r==8 then
     		rs = "08"
-    	elsif r==9
+    	elsif r==9 then
    		    rs = "09"
-        elsif r==10
+        elsif r==10 then
     	    rs = "0a"
-    	elsif r==11
+    	elsif r==11 then
     		rs = "0b"
-        elsif r==12
+        elsif r==12 then
         	rs = "0c"
-        elsif r==13
+        elsif r==13 then
         	rs = "0d"
-        elsif r==14
+        elsif r==14 then
         	rs = "0e"
-        elsif r==15
+        elsif r==15 then
         	rs = "0f"
         else
 		    rs = r.to_s(16)
@@ -88,25 +88,25 @@ module Bot::DiscordCommands
 	    	gs = "04"
 	    elsif g==5 then
 	        gs = "05"
-        elsif g==6
+        elsif g==6 then
 	    	gs = "06"
-	    elsif g==7
+	    elsif g==7 then
 	        gs = "07"
-        elsif g==8
+        elsif g==8 then
 	    	gs = "08"
-	    elsif g==9
+	    elsif g==9 then
 		    gs = "09"
-        elsif g==10
+        elsif g==10 then
 	        gs = "0a"
-	    elsif g==11
+	    elsif g==11 then
 		    gs = "0b"
-        elsif g==12
+        elsif g==12 then
 	        gs = "0c"
-	    elsif g==13
+	    elsif g==13 then
 		    gs = "0d"
-        elsif g==14
+        elsif g==14 then
 	        gs = "0e"
-	    elsif g==15
+	    elsif g==15 then
 		    gs = "0f"
         else
 	        gs = g.to_s(16)
@@ -124,25 +124,25 @@ module Bot::DiscordCommands
 	    	bs = "04"
 	    elsif b==5 then
 	        bs = "05"
-        elsif b==6
+        elsif b==6 then
 	    	bs = "06"
-	    elsif b==7
+	    elsif b==7 then
 	        bs = "07"
-        elsif b==8
+        elsif b==8 then
 	    	bs = "08"
-	    elsif b==9
+	    elsif b==9 then
 	        bs = "09"
-        elsif b==10
+        elsif b==10 then
 	    	bs = "0a"
-	    elsif b==11
+	    elsif b==11 then
 	        bs = "0b"
-        elsif b==12
+        elsif b==12 then
 	    	bs = "0c"
-	    elsif b==13
+	    elsif b==13 then
 	        bs = "0d"
-	    elsif b==14
+	    elsif b==14 then
         	bs = "0e"
-	    elsif b==15
+	    elsif b==15 then
 	    	bs = "0f"
         else
 	    	bs = b.to_s(16)
