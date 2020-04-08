@@ -24,7 +24,7 @@ module Bot::DiscordCommands
 	        g = rand(0xff)
             b = rand(0xff)
         else
-            args = "abcdefg".delete("#")
+            args = args.delete("#")
             color = args.scan(/.{1,#{2}}/)
             r = color[0]
             g = color[1]
