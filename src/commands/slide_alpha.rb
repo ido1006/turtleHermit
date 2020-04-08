@@ -30,7 +30,7 @@ module Bot::DiscordCommands
                     if x < a_s then
                         x = a_s + 26 - ((a_s - x) % 26)
                     end
-                    if x >= z_s then
+                    if x > z_s then
                         x = a_s + ((x - a_s) % 26)
                     end
                     args[i] = x.chr
@@ -41,7 +41,7 @@ module Bot::DiscordCommands
                     if x < a_l then
                         x = a_l + 26 - ((a_l - x) % 26)
                     end
-                    if x >= z_l then
+                    if x > z_l then
                         x = a_l + ((x - a_l) % 26)
                     end
                     args[i] = x.chr
