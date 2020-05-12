@@ -24,7 +24,7 @@ module Bot
   # Create bot
   BOT = Discordrb::Commands::CommandBot.new(client_id: BOT_CLIENT_ID,
                                             token: BOT_TOKEN,
-                                            prefix: "!")
+                                            prefix: "&")
 
   # Load modules
   def self.load_modules(klass, path)
