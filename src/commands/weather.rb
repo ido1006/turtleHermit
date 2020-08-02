@@ -2,11 +2,8 @@ module Bot::DiscordCommands
   module Weather
     extend Discordrb::Commands::CommandContainer
 
-    LIVEDOOR_WEATHER_API_HOST = "http://weather.livedoor.com/forecast/webservice/json/v1".freeze
-    MISHIMA_CITY_ID = 220030
-
     attrs = {
-      description: '三島のお天気をお知らせします',
+      description: '三島のお天気をお知らせできません',
       usage: 'weather'
     }
 
