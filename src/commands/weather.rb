@@ -15,21 +15,9 @@ module Bot::DiscordCommands
     end
 
     def self.weather_message
-      uri = URI.parse("#{LIVEDOOR_WEATHER_API_HOST}?city=#{MISHIMA_CITY_ID}")
-      response = Net::HTTP.get_response(uri)
-      res_json = JSON.parse(response.body)
-
-      city = res_json.dig("location","city")
-      forecasts = res_json["forecasts"]
-
-      message = ""
-      forecasts.each { |f|
-        max_temp = f.dig("temperature","max","celsius")
-        message += "#{f["dateLabel"]}（#{f["date"]}）の#{city}の天気は「#{f["telop"]}」"
-        message += "、最高気温は#{max_temp}℃" unless max_temp.nil?
-        message += "\n"
-      }
-    message
+      message = "livedoorのサービス終了につき、停止中です。\n"
+      message += "気分がノったら直します。"
+      message
     end
   end
 end
