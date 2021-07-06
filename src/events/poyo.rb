@@ -10,7 +10,6 @@ module Bot::DiscordEvents
           message.delete!(i)
         end
         if message=="" then
-          event.send_message("ぽよ")
         else
           event.message.delete
         end
