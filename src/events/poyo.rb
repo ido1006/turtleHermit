@@ -7,7 +7,7 @@ module Bot::DiscordEvents
       message=event.message.content
       if poyo.any? { |i| message.include?(i) } && event.channel.id == 861905463871668244 then
         for i in poyo do
-          message.slice!(i)
+          message.delete!(i)
         end
         if message=="" then
           event.send_message("ぽよ")
