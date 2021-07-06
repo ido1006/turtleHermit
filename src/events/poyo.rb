@@ -6,15 +6,8 @@ module Bot::DiscordEvents
       if event.channel.id == 861905463871668244
         str = event.message.content
         for s in str do:
-          if !( (s == 'ぽ') ||
-              (s == 'よ') ||
-              (s == 'ょ') ||
-              (s == 'ぅ') ||
-              (s == 'ー') ||
-              (s == '〜') ||
-              (s == 'ん') ||
-              (s == '！') ||
-              (s == '？') )
+          if (s == 'ぽ') || (s == 'よ') || (s == 'ぅ') || (s == 'ょ') || (s == 'ー') || (s == '〜') || (s == '！') || (s == '？')
+          else
             event.message.delete
           end
         end
