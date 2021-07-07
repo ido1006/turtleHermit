@@ -14,6 +14,8 @@ module Bot::DiscordEvents
           else
             event.message.delete
           end
+        else
+          event.message.delete
         end
       end
     end
