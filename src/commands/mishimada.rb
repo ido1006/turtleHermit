@@ -23,7 +23,7 @@ module Bot::DiscordCommands
       searchTime ||= time.strftime('%H%M')
       searchTime = searchTime[0..1].to_i * 60 + searchTime[2..3].to_i
       if direction == "NON-DIRECTION" then
-        message = "Put direction (m2s or s2m)."
+        message = "Put direction (mts(三島to島田) or stm(島田to三島))."
       elsif direction == "mts" then
         message = mts_message(searchTime: searchTime)
       elsif direction == "stm" then
