@@ -21,7 +21,7 @@ module Bot::DiscordCommands
       time = DateTime.now
       time = time.new_offset(Rational(9,24))
       searchTime ||= time.strftime('%H%M')
-      searchTime = searchTime[0,1].to_i * 60 + searchTime[2,3].to_i
+      searchTime = searchTime[0..1].to_i * 60 + searchTime[2..3].to_i
       if direction == "NON-DIRECTION" then
         message = "Put direction (m2s or s2m)."
       elsif direction == "mts" then
@@ -31,7 +31,6 @@ module Bot::DiscordCommands
       else
         message = "Put correct argument."
       end
-      message = searchTime
       message # 戻り値としてmessageを返します
     end
 
