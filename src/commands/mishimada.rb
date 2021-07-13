@@ -5,11 +5,11 @@ module Bot::DiscordCommands
     # module名の1文字目は大文字にしてください。エラー吐いた！(2020/4/7追記)
 
     attrs = {
-      description: '三島-島田(静岡)間の発車時刻,到着時刻をお伝えします。土日対応は気が向いたらします。多分向かない。', # プログラムの説明を書きます ,を忘れないで(2敗)
-      usage: '&mishimada [mts or stm] [hhmm]' # コードの使い方を書きます
+      description: '三島-島田(静岡)間(みしまだ->msmd)の発車時刻,到着時刻をお伝えします。土日対応は気が向いたらします。多分向かない。', # プログラムの説明を書きます ,を忘れないで(2敗)
+      usage: '&msmd [mts or stm] [hhmm]' # コードの使い方を書きます
     }
 
-    command :mishimada, attrs do |event, direction, searchTime| # event はコマンド自身、args は引数
+    command :msmd, attrs do |event, direction, searchTime| # event はコマンド自身、args は引数
       # 中身を書きます
       # よく ~~_message として
       # 内容を関数に投げます
