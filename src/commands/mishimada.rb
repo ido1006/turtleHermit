@@ -6,7 +6,7 @@ module Bot::DiscordCommands
 
     attrs = {
       description: '三島-島田(静岡)間の発車時刻,到着時刻をお伝えします。土日対応は気が向いたらします。多分向かない。', # プログラムの説明を書きます ,を忘れないで(2敗)
-      usage: '&mishimada [m2s or s2m] [hhmm]' # コードの使い方を書きます
+      usage: '&mishimada [mts or stm] [hhmm]' # コードの使い方を書きます
     }
 
     command :mishimada, attrs do |event, direction, searchTime| # event はコマンド自身、args は引数
@@ -24,9 +24,9 @@ module Bot::DiscordCommands
       searchTime = searchTime[0,1].to_i * 60 + searchTime[2,3].to_i
       if direction == "NON-DIRECTION" then
         message = "Put direction (m2s or s2m)."
-      elsif direction == "m2s" then
+      elsif direction == "mts" then
         message = m2s_message(searchTime: searchTime)
-      elsif direction == "s2m" then
+      elsif direction == "stm" then
         message = s2m_message(searchTime: searchTime)
       end
       message # 戻り値としてmessageを返します
@@ -34,6 +34,7 @@ module Bot::DiscordCommands
 
     def self.m2s_message(searchTime: nil)
       message = ""
+      searchTime = searchTime.to_i
       if searchTime <= 5*60+32 then
         message = "0532三島発\n"
         message += "静岡で乗り換え -> 0701島田着\n"
