@@ -31,6 +31,7 @@ module Bot::DiscordCommands
       else
         message = "Put correct argument."
       end
+      message = searchTime
       message # 戻り値としてmessageを返します
     end
 
