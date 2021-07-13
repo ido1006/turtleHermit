@@ -25,14 +25,14 @@ module Bot::DiscordCommands
       if direction == "NON-DIRECTION" then
         message = "Put direction (m2s or s2m)."
       elsif direction == "mts" then
-        message = m2s_message(searchTime: searchTime)
+        message = m2s_message(searchTime)
       elsif direction == "stm" then
-        message = s2m_message(searchTime: searchTime)
+        message = s2m_message(searchTime)
       end
       message # 戻り値としてmessageを返します
     end
 
-    def self.m2s_message(searchTime: nil)
+    def self.m2s_message(searchTime)
       message = ""
       searchTime = searchTime.to_i
       if searchTime <= 5*60+32 then
@@ -207,7 +207,7 @@ module Bot::DiscordCommands
       message
     end
     
-    def self.s2m_message(searchTime: nil)
+    def self.s2m_message(searchTime)
       message = "現時点で島田から三島の情報なんざ要らんことに気づいたので,やる気が出たら書く"
 
       message
