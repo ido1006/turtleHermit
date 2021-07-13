@@ -29,7 +29,6 @@ module Bot::DiscordCommands
       elsif direction == "s2m" then
         message = s2m_message(searchTime: searchTime)
       end
-      message = searchTime
       message # 戻り値としてmessageを返します
     end
 
