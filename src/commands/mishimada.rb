@@ -21,7 +21,7 @@ module Bot::DiscordCommands
       time = DateTime.now
       time = time.new_offset(Rational(9,24))
       searchTime ||= time.strftime('%H%M')
-      searchTime = searchTime[1,2].to_i * 60 + searchTime[3,4].to_i
+      searchTime = searchTime[0,1].to_i * 60 + searchTime[2,3].to_i
       if direction == "NON-DIRECTION" then
         message = "Put direction (m2s or s2m)."
       elsif direction == "m2s" then
