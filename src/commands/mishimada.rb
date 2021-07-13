@@ -25,16 +25,17 @@ module Bot::DiscordCommands
       if direction == "NON-DIRECTION" then
         message = "Put direction (m2s or s2m)."
       elsif direction == "mts" then
-        message = m2s_message(searchTime)
+        message = mts_message(searchTime: searchTime)
       elsif direction == "stm" then
-        message = s2m_message(searchTime)
+        message = stm_message(searchTime: searchTime)
+      else
+        message = "Put correct argument."
       end
       message # 戻り値としてmessageを返します
     end
 
-    def self.m2s_message(searchTime)
+    def self.mts_message(searchTime: nil)
       message = ""
-      searchTime = searchTime.to_i
       if searchTime <= 5*60+32 then
         message = "0532三島発\n"
         message += "静岡で乗り換え -> 0701島田着\n"
@@ -207,7 +208,7 @@ module Bot::DiscordCommands
       message
     end
     
-    def self.s2m_message(searchTime)
+    def self.stm_message(searchTime)
       message = "現時点で島田から三島の情報なんざ要らんことに気づいたので,やる気が出たら書く"
 
       message
