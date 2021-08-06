@@ -3,7 +3,7 @@ module Bot::DiscordCommands
         extend Discordrb::Commands::CommandContainer
 
         attrs = {
-            description: 'かめせんにんがランダムに部長を決めます。\n引数にmentionをつけるとメンションが飛びます。',
+            description: 'かめせんにんがランダムに部長を決めます。引数にmentionをつけるとメンションが飛びます。',
             usage: 'whoistop (mention)'
         }
 
