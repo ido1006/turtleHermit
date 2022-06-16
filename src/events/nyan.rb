@@ -3,9 +3,9 @@ module Bot::DiscordEvents
     extend Discordrb::EventContainer
 
     message do |event|
-      poyo=["ぽ","よ","ぅ","ん","ー","！","？","〜","\n"]
+      poyo=["う","ふ","に","ゃ","あ","ぁ","っ","ー","ん","！","？","〜","\n"]
       message=event.message.content
-      if (event.channel.id == 861905463871668244 || event.channel.id == 985606379538612244) then
+      if event.channel.id == 985606413042733162 then
         if poyo.any? { |i| message.include?(i) } then
           for i in poyo do
             message.delete!(i)
